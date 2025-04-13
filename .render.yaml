@@ -1,5 +1,6 @@
 services:
   - type: pserv
+    image: mongo:7
     name: mongodb
     env: docker
     plan: starter

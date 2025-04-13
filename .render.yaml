@@ -1,0 +1,19 @@
+services:
+  - type: pserv
+    name: mongodb
+    env: docker
+    plan: starter
+    region: oregon
+    disk:
+      name: mongo-data
+      mountPath: /data/db
+      sizeGB: 10
+    image: mongo:7
+    envVars:
+      - key: MONGO_INITDB_ROOT_USERNAME
+        value: db-admin
+      - key: MONGO_INITDB_ROOT_PASSWORD
+        value: ugVXNp75MwjdSH64qR8Tye
+      - key: MONGO_INITDB_DATABASE
+        value: app
+    autoDeploy: false
